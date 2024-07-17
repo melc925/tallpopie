@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CesiumJS High Voltage Transmission Towers</title>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.87/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        #cesiumContainer {
+            width: 100%;
+            height: 600px;
+            display: block;
+        }
+        #coordinates {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="coordinates">
+        <label for="tower1">Tower 1 Coordinates (lat, lon):</label>
+        <input type="text" id="tower1" value= "-33.039424,151.320942" placeholder="e.g., 34.0522, -118.2437">
+        <label for="tower2">Tower 2 Coordinates (lat, lon):</label>
+        <input type="text" id="tower2" value= "-33.029424,151.290942" placeholder="e.g., 36.7783, -119.4179">
+        <button onclick="renderTowers()">Render Towers</button>
+    </div>
+    <div id="cesiumContainer"></div>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.87/Build/Cesium/Cesium.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
